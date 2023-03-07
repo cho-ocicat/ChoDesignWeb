@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    @*Default window title*@
+    <title>@ViewData["Title"] - OciDesigns</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/OciDesignsWeb1.styles.css" asp-append-version="true" />
+
+    @*Special Elite and Overlock fonts*@
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Special+Elite&display=swap" rel="stylesheet">
+
+    @*icon references*@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        header, footer, i {
+            font-family: 'Overlock', cursive;
+            background-color: #160F29;
+            color: #368F8B;
+        }
+        .navbar-brand{
+            font-size: 35px;
+        }
+        
+        nav a, .nav-link {
+            text-decoration: none;
+            color: #368F8B;
+        }
+
+        nav a:hover{
+            color: #F3DFC1;
+        }
+
+        .nav-item a:hover{
+                background-color: #DDBEA8;
+                color: #160F29;
+        }
+
+        i {
+            vertical-align: bottom;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                @*Place for logo or name of the website*@
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">OCI DESIGNS</a>
+                @*Button will appear when the screen is too small for navbar to show. Act as dropdown box*@
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars fa-2x"></i>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Year12">Year 12</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Year13">Year 13</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="container-fluid row border-top footer mx-0 px-0">
+        <div class="col-3 pl-3">
+            &copy; 2023 - Oci Designs. All rights reserved.  
+        </div>
+        <div class="col pr-5">
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a>
+            <a href="https://nz.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+            <a href="https://twitter.com/?lang=en" target="_blank"><i class="fa-brands fa-twitter fa-2x"></i></a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
