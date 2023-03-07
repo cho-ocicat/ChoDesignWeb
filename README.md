@@ -2,10 +2,11 @@
 Project of Software Release Management in Term 1, March 2023. Focusing on source and version control through GitHub Desktop, Git Bash, and GitHub browser.
 
 Frameworks used in this website's creation:
-ASP .NET Core MVC 6
-Bootstrap (CSS and JS included)
+1. ASP .NET Core MVC 6
+2. Bootstrap (CSS and JS included)
 
 Scenario used for the website:
+
 Your company, Curio Design Limited, have been approached by a client to develop a website to showcase her design projects. She wants each project to have its own page, with unique colour schemes to differentiate each other.
 
 The basic requirements that she needs in her website are:
