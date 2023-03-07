@@ -2,6 +2,120 @@
     ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to Oci Designs</h1>
-</div>
+<!-- Gugi and Inter fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gugi&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+<!-- Special Elite and Overlock fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Special+Elite&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        /*background-image: linear-gradient(#246A73, #368F8B, #246A73);*/
+        background-color: #F3DFC1;
+    }
+
+    h1, p {
+        color: black;
+    }
+
+    .card {
+        background-color: #160F29;
+        box-shadow: 0 4px 8px 0 #DDBEA8;
+    }
+
+    a {
+        text-decoration: none;
+        color: #368F8B;
+    }
+    a:hover {
+        color: #F3DFC1;
+    }
+
+    .zoom {
+        transition: transform .5s;
+    }
+    .zoom:hover{
+        -ms-transform: scale(1.1); /* IE 9 */
+        -webkit-transform: scale(1.1); /* Safari 3-8 */
+        transform: scale(1.1);
+    }
+</style>
+
+<body>
+    <div class="container text-center">
+        <h1>Welcome to Oci Designs!</h1>
+        <p>A website where I showcase my character design projects during Year 12 and Year 13 of high school (or college, as they call it here). Feel free to look around, and I hope you like what you found!</p>
+        <br />
+        <p><b>Click on the image to check each page!</b></p>
+
+        <div> 
+            <div class="row row-cols-3 text-center">
+                <div class="col">
+                    <a asp-controller="Home" asp-action="About">
+                        <div class="card">
+                            <img class="card-img-top zoom" id="creator-pic" onmouseover="showCreator()" onmouseout="defaultCreator()" src="/Images/Grey_Square.png" />
+                                <div class="card-body" style=" font-family: 'Overlock' , cursive;">
+                                    <h2 class="card-title">ABOUT</h2>
+                                    <h3 class="card-text">Creator information</h3>
+                                </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a asp-controller="Home" asp-action="Year12">
+                        <div class="card">
+                            <img class="card-img-top zoom" id="enigma-chibi" onmouseover="showEnigma()" onmouseout="defaultEnigma()" src="/Images/Enigma chibi 1.png">
+                                <div class="card-body" style="font-family: 'Gugi', cursive;">
+                                    <h2 class="card-title">DECEIT</h2>
+                                    <h3 class="card-text">Year 12 Design</h3>
+                                </div>
+                        </div>
+                    </a>
+                </div>
+                 <div class="col">
+                   <a asp-controller="Home" asp-action="Year13">
+                        <div class="card">
+                            <img class="card-img-top zoom" id="arcana-chibi" onmouseover="showArcana()" onmouseout="defaultArcana()" src="/Images/Arcana chibi 1.png">
+                                <div class="card-body" style="font-family: 'Special Elite', cursive;">
+                                    <h2 class="card-title">Entropy</h2>
+                                    <h3 class="card-text">Year 13 Design</h3>
+                                </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script>
+    var creator = document.getElementById("creator-pic");
+    var enigma = document.getElementById("enigma-chibi");
+    var arcana = document.getElementById("arcana-chibi");
+
+    function showCreator() {
+        creator.src = "Images/standing menacingly.png";
+    }
+    function defaultCreator() {
+        creator.src = "Images/Grey_Square.png";
+    }
+
+    function showEnigma() {
+        enigma.src = "Images/Enigma chibi 2.png";
+    }
+    function defaultEnigma() {
+        enigma.src = "Images/Enigma chibi 1.png";
+    }
+
+    function showArcana() {
+        arcana.src = "Images/Arcana chibi 2.png";
+    }
+    function defaultArcana() {
+        arcana.src = "Images/Arcana chibi 1.png";
+    }
+</script>
