@@ -3,7 +3,12 @@ Project of Software Release Management in Term 1, March 2023. Focusing on source
 
 Frameworks used in this website's creation:
 1. ASP .NET Core MVC 6
-2. Bootstrap (CSS and JS included)
+2. Bootstrap 5 (JS included)
+
+jQuery plugins used:
+1. Maphilight by David Lynch https://github.com/kemayo/maphilight
+2. RWD Image Maps by Matt Stow https://github.com/stowball/jQuery-rwdImageMaps/
+
 
 Scenario used for the website:
 
