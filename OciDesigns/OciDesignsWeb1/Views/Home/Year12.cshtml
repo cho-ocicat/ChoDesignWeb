@@ -2,6 +2,384 @@
     ViewData["Title"] = "DECEIT";
 }
 
+<!-- Gugi and Inter fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gugi&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+@*icon references*@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    body {
+        background-image: linear-gradient(#1e1f1f, #19a8a9, #1e1f1f);
+        background-color: #160F29;
+        color:white;
+    }
+    #logo {
+        float: left;
+        width:100%;
+        max-width:400px;
+        height: auto;
+    }
+    h1 {
+        font-family: 'Gugi', cursive;
+        font-size: 48px;
+        font-weight: 400;
+    }
+    h4 {
+        font-family: 'Gugi', cursive;
+        font-size: 28px;
+    }
+    h5 {
+        text-align:center;
+    }
+
+    .modal {
+        color: black;
+    }
+
+    .modal-title {
+        font-family: 'Gugi', cursive;
+    }
+
+    .btn {
+        background-color: #19a8a9;
+        color: white;
+        font-weight: bold;
+    }
+    .btn:hover {
+        background-color: #bde6ec;
+        color: #1e1f1f;
+        font-weight: bold;
+    }
+
+    #go_up {
+        float: right;
+        color: #DDBEA8;
+        opacity: 0.5;
+    }
+    #go_up:hover {
+        opacity: 1.0;
+    }
+</style>
+
 <body>
-    This is design project - DECEIT's page.
+    <div class="container">
+        <h1 class="text-center pb-3">Year 12 Design - DECEIT</h1>
+        <div class="pt-1"><img id="logo" src="~/Images/Deceit logo.png"></div>
+        <div>
+            <p>
+                DECEIT is a story idea I have since 2017. It started with my interest in the murder mystery genre and my fixation on these three characters that I later named Enigma, Dicey and Ace. Back then, the story was known as DEATH because of the main characters’ initials but it doesn’t seem appropriate in a high school folio board, so I changed it to DECEIT instead.
+            </p>
+            <p>
+                DECEIT is a murder mystery in a sci-fi setting. It focuses on the underground group known as DEATH—a menace to whoever has something to lose. One day, their archenemy, the famous detective X, approach them with a case. A case that looked simple enough, spiralled out into a highly dangerous case, and the world depends on whether the culprit can be caught or not. This is a story of enemies working together for the greater good.
+            </p>
+            <p>
+                Taking DECEIT as my character design board in 2020 was probably one of my best and worst ideas. I get to learn more about design processes and push myself to learn new colouring techniques. On the other hand, DECEIT was a passion project. The amateur (and still is) me want to display my characters with pride and I underestimate the design process of concepts and developments. I forced myself to draw three instead of two, trying out new techniques on the run, and combined this with the pandemic, it was one of the most stressful years of my life. I definitely learnt a lot from this.
+            </p>
+            <br /><br />
+            <h5><b>Hover over the image and click the sections!</b></h5>
+            <br />
+        </div>
+    </div>
+
+    <!-- MAP AREA OF THE BOARD-->
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-2"></div>
+            <div class="col">
+                <img id="dc-board-img" usemap="#deceit_board" src="/Images/DECEIT-final-board.png" class="img-fluid" style="max-height: 688px;" width="1024" height="688" alt="Yr 12 DECEIT design folio board">
+
+                <map name="deceit_board">
+                    <!-- rect coords: left(x), top(y), right(x), bottom(y) -->
+
+                    <area shape="rect"
+                          coords="10, 10, 92, 165"
+                          class="tooltip" title="Design Proposal"
+                          data-bs-toggle="modal"
+                          data-bs-target="#proposal">
+
+                    <area id="logo-test" shape="rect"
+                          coords="96, 8, 502, 166"
+                          class="tooltip" title="Logo Design"
+                          data-bs-toggle="modal"
+                          data-bs-target="#logo">
+
+                    <area shape="rect"
+                          coords="10, 168, 502, 338"
+                          class="tooltip" title="Character 1: Enigma"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enigma">
+
+                    <area shape="rect"
+                          coords="10, 340, 502, 510"
+                          class="tooltip" title="Character 2: Dicey"
+                          data-bs-toggle="modal"
+                          data-bs-target="#dicey">
+
+                    <area shape="rect"
+                          coords="10, 508, 502, 682"
+                          class="tooltip" title="Character 3: Ace"
+                          data-bs-toggle="modal"
+                          data-bs-target="#ace">
+
+                    <area shape="rect"
+                          coords="520, 4, 768, 430"
+                          class="tooltip" title="Comic Design"
+                          data-bs-toggle="modal"
+                          data-bs-target="#comic">
+
+                    <area shape="rect"
+                          coords="774, 4, 1016, 430"
+                          class="tooltip" title="Poster Design"
+                          data-bs-toggle="modal"
+                          data-bs-target="#poster">
+
+                    <area shape="rect"
+                          coords="520, 432, 1016, 676"
+                          class="tooltip" title="Webpage Design"
+                          data-bs-toggle="modal"
+                          data-bs-target="#webpage">
+
+                    <area shape="rect"
+                          coords=""
+                          class="tooltip" title=""
+                          data-bs-toggle="modal"
+                          data-bs-target="#"
+                          alt="___ section">
+                </map>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+
+    <!-- MODAL WHEN AREA IS SELECTED -->
+    <!-- Proposal -->
+    <div class="modal fade" id="proposal" role="dialog">
+        <!-- classes below: vertically centered and wide modal -->
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="proposalLabel">Design Proposal</h5>
+                    
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid row">
+                        <div class="col"><img src="/Images/DC1-proposal.png" class="img-fluid"></div>
+                        <div class="col align-self-center"><p>This is my design proposal, colour palette, and synopsis of the plot. Looking back at it, the synopsis looks a lot like an introduction to the world-building instead of the plot and the characters. But to consider I have to introduce the concept of not having a neck in a limited space for writing a synopsis, this was enough I suppose.</p></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Logo -->
+    <div class="modal fade" id="logo" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoLabel">Logo Design</h5>
+                    
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div><img src="/Images/DC2-logo.png" class="img-fluid"></div>
+                        <div>
+                            <p>This section was not really fun in my opinion. It was in this section that I was introduced to the development process, which, while I understand its intention, didn’t really do well for me. Making concepts was fun! But developing and changing fonts and colours with the assets that sometimes I found way later that it’s in low resolution can be frustrating. I’m surprised the logo actually looks all right. Could be better though.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Enigma -->
+    <div class="modal fade" id="enigma" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="enigmaLabel">Enigma</h5>
+                    
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div><img src="/Images/DC3-enigma.png" class="img-fluid"></div>
+                        <div>
+                            <p>Enigma is based on a character I made in my junior high year, so making her concepts doesn’t take much time. Since she’s the main character, I grasp what I want her character to be: decisive and cunning hidden behind her laziness.</p>
+                            <p>Developments-wise, it was not really engaging. You may see how in every development of the three characters, the hair and eye colours were all over the place because I know I want her to embody the monotone colour. She found the world to be dull and restrictive and the way to control her own life is to do whatever she wants.</p>
+                            <p>Her final drawing took the longest time out of the three due to her hair. I also want to draw her to the best of my capability, and it leads me to keep undoing any line art or colouring I’ve done. Looking back at this, I’m happy I took my time to learn a new technique and push myself to the limit, but next time I’ll be more mindful of my time and current skill to make the most out of the drawing process. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Dicey -->
+    <div class="modal fade" id="dicey" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="diceyLabel">Dicey</h5>
+                    
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div><img src="/Images/DC4-dicey.png" class="img-fluid"></div>
+                        <div>
+                            <p>Dicey is based on another character I made months after Enigma’s base character as her twin. Making his concepts take a while due to his tech-savviness. While Enigma is tech-savvy herself, she doesn’t bother using them outside of missions, unlike Dicey. So his section becomes an important place to introduce some technologies used in the story, which I admittedly haven’t put much thought into. The original DEATH plot is set in a futuristic setting, but it’s not as sci-fi as DECEIT now. Since I was also being chased by time, it wasn’t well developed.</p>
+                            <p>Developments more or less were the same feeling as Enigma’s, although I spent more time thinking about what kind of clothes and what colours Dicey would wear. In the end, I decided on a light brown shirt to state his neutrality and dark blue shorts to connect Ace to him (Enigma is already connected to him). Dicey is a bridge and brake that connects Enigma and Ace.</p>
+                            <p>Final Dicey was frustrating, due to his character design in general. Until now I still don’t really understand why Dicey is tricky to draw. It could be the hair or the way I want to draw his tired youthful energy, I’m not sure. Re-drawing Dicey in 2022 (drawing below) is a lot easier as I developed more knowledge in anatomy.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Ace -->
+    <div class="modal fade" id="ace" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="aceLabel">Ace</h5>
+                    
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div><img src="/Images/DC5-ace.png" class="img-fluid"></div>
+                        <div>
+                            <p>Ace is based on a character I made in early high school. His entire section is a different level of frustrating, exciting and exhausting due to Ace, as a character, is meant to be attractive. Like, conventionally attractive, the type that can make anyone swoon. He knows his worth and used it to the max. My expectation for him was (and still is) over the roof and it puts a huge burden on me.</p>
+                            <p>Comparing the 2020 Ace to the 2022 Ace, I found that the 2020 Ace is more youthful than the 2022 Ace, which is more mature in appearance. His change in vibe is definitely due to the influence of the <a href="https://en.wikipedia.org/wiki/Manhwa" target="__blank" style="text-decoration:none;">manhwas</a> I often read in 2021 and early 2022. Despite that, his personality stays the same, a deceptively cheerful person that can turn 180 anytime he wishes. He’s a dangerously carefree man who only has the twins to lose.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Comic -->
+    <div class="modal fade" id="comic" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="comicLabel">(Web)comic</h5>
+                    
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid row">
+                        <div class="col"><img src="/Images/DC6-comic.png" class="img-fluid"></div>
+                        <div class="col align-self-center">
+                            <p>While I tried making comics during my junior high year, it was based on <a href="https://en.wikipedia.org/wiki/Manga" target="__blank" style="text-decoration:none;">mangas</a> with the movement of flipping pages. A webcomic is a different type of comic, the one where the flow of the story flows continuously downwards as you scroll. During this time, I haven’t read lots of <a href="https://en.wikipedia.org/wiki/Manhwa" target="__blank" style="text-decoration:none;">manhwas</a> that adopt this comic flow and still like to read mangas. As you can see in the final, I choose the page that uses manga panels instead of manhwas.</p>
+                            <p>This section was a curious experience. Since people are going to see and maybe read the snippets of the story, I put a lot of thought into what I want to show and how the scene should flow. Drawing a comic requires a lot of consideration of the scene’s importance, which character you should show and their drawing perspective, and where to put the dialogue so as to not obstruct the view but also doesn’t let the reader struggles to read it in order.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Poster -->
+    <div class="modal fade" id="poster" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="posterLabel">Poster Design</h5>
+                    
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid row">
+                        <div class="col"><img src="/Images/DC7-poster.png" class="img-fluid"></div>
+                        <div class="col align-self-center">
+                            <p>The poster section was where I lost my way into the woods. I didn’t have any focus on delving into this section—I just find interesting poster ideas on Pinterest and use them as references. The only important thing I keep in mind is to involve all characters as much as possible since they’re all protagonists.</p>
+                            <p>You might have seen how different each poster is. I tried negative spaces, fully drawn backgrounds, and effects like cracked glass, dust and blood splatters. I must say I love all of them, and I wish there was no need for a final version. But looking back now, all of them can definitely be fixed to a hopefully better version.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Webpage -->
+    <div class="modal fade" id="webpage" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="webpageLabel">Webpage Design</h5>
+                    
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div><img src="/Images/DC8-webpage.png" class="img-fluid"></div>
+                        <div>
+                            <p>This is my first taste of UI. While sometimes I found some website looks good and some is a bother to scroll through, I have never considered how a website design plays a heavy part in that feeling when using the website. I studied web design only through Pinterest, looking through webpages specially made with visuals that stand out, with characters plastered on the main page. It’s not the most perfect way to study, but it did the work for me back then.</p>
+                            <p>Looking back on this section, I don’t really have any comments on it. It was a section I have never experienced before, so I have no expectations except that it looked good.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="container">
+        <div class="row py-5">
+            <div class="col">
+            <img class="img-fluid" src="~/Images/Final DECEIT Dec 2022.png" /></div>
+
+            <div class="col">
+                <h4>My current drawing skill (December 2022)</h4>
+                <p>People change over time. It’s impossible to stay the same. And so is skill!</p>
+                <p>In 2021, during my Entropy design year, I found that I like colouring technique that creates a muted, gloomy atmosphere. I don’t have a knack for colours, so this colouring vibe helps me a lot in deciding on colours. And with this vibe, highlighting features becomes a lot more apparent, so that’s another plus!</p>
+                <p>I also slowly developing my anatomy drawing skills. I haven’t done proper anatomy study, but I start to use more references to try and get a feel of how to make a great perspective of the body. Though in this case, I didn’t use reference because I can’t find any haha. I’m sure at some point in the future, I will look back at this picture and cringe a little, seeing many points to improve.</p>
+                <p>If you have read my notes on the characters’ sections, you might notice how most of the time I was frustrated drawing their characters, especially Ace. While I wasn’t frustrated drawing them in here, I do notice how long it took me to finish this drawing, more than 5 hours spans across 3 days. I think these three is the hardest character to draw due to my attachment to them. Their base characters are the earliest OCs I’ve created and until now, are still referred to as my main OCs, flexible to be put in any story. I have an unconscious expectation of them, making me want to draw them as well as possible.</p>
+                <p>Not to mention, each day they grew their character depth, adding more values I want to be able to show in a drawing, which is kind of impossible with my current skill. But I still like them as characters, and I hope in the future, DECEIT can be shown properly to the world.</p>
+            </div>
+        </div>
+        
+
+        <div class="row container-fluid">
+            <div class="col offset"></div>
+            <div class="col-1 p-2">
+                <a asp-controller="Home" asp-action="Year12">
+<i id="go_up" class="fa-solid fa-circle-up fa-2x"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+
 </body>
+
+<!-- Highlight map area jQuery plugin -->
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<script src="/lib/maphilight-master/jquery.maphilight.js"></script>
+<script>
+    $('.foo').maphilight()
+    $('img[usemap]').maphilight({ strokeColor: '551215', strokeWidth: 1.5, fillColor: 'bc4749', fillOpacity: 0.3 })
+</script>
+
+<!-- Scale-responsive map area jQuery plugin -->
+<script src="/lib/jQuery-rwdImageMaps-master/jquery.rwdImageMaps.js"></script>
+<script>
+    $('img[usemap]').rwdImageMaps();
+</script>
