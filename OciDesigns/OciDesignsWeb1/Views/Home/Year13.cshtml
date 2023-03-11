@@ -2,6 +2,384 @@
     ViewData["Title"] = "Entropy";
 }
 
+<!-- Special Elite and Overlock fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Special+Elite&display=swap" rel="stylesheet">
+
+@*icon references*@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    body {
+         background-image: linear-gradient(#2b2018,#958b83, #2b2018);
+        background-color: #160F29;
+        color: white;
+    }
+
+    #logo {
+        float: left;
+        width:100%;
+        max-width:350px;
+        height: auto;
+    }
+
+    h1 {
+        font-family: 'Special Elite', sans-serif;
+        font-size: 50px;
+        font-weight: 200;
+    }
+
+    h4 {
+        font-family: 'Special Elite', sans-serif;
+    }
+
+    h5 {
+        text-align: center;
+    }
+    p {font-family: 'Overlock', cursive; font-size: 18px;}
+    
+    .modal {
+        color: black;
+    }
+
+    .modal-title {
+        font-family: 'Special Elite', cursive;
+    }
+
+    .btn {
+        background-color: #d9cfc7;
+        color: #551215;
+        font-weight: bold;
+    }
+
+    .btn:hover {
+        background-color: #551215;
+        color: #d9cfc7;
+        font-weight: bold;
+    }
+
+    #go_up {
+        float: right;
+        color: #368F8B;
+        opacity: 0.5;
+    }
+
+    #go_up:hover {
+        opacity: 1.0;
+    }
+
+</style>
+
 <body>
-    This is Year 13 - Entropy's page.
+    <div class="container">
+        <h1 class="text-center pb-3">Year 13 Design - Entropy</h1>
+        <div class="pt-1"><img id="logo" src="~/Images/Entropy logo final.png" /></div>
+        <div>
+            <p>
+                Entropy is an idea I get during Biology class in 2020. It was quite random—I’m in no rush to finish my assignment and spend some time doodling. At that time, I’m planning to take Year 13 Design class and I don’t really want to involve in another of my passion projects. But since I take character design, I want them to have a story, and so Entropy is born. It starts from a reaper that observes an unhinged assassin just out of interest, but in the end, it developed into quite a different story.
+            </p>
+            <p>
+                Entropy is a story of an ambitious young reaper. They desire the position of the next Leader, and in their attempt to learn more, Leader banished them into the mortal world in a body of a fragile human child. Stuck in the worst possible place a person could imagine, the reaper must find ways to break the curse and get back to the reaper realm. Whatever it takes, even if they must play the role of father-daughter with a dangerous assassin and get emotionally attached—wait.
+            </p>
+            <p>
+                Despite this board having more content than last year, Entropy is less stressful. The story was still quite simple in early 2021, and I purposefully have only two main characters for the story. But since this is simple, once again I underestimate it by trying to make this an animation board. I know animation is hard and try to have simple designs to go with it. But then lockdown happens and I have to scratch that idea, turning the animation into a folio board about visual novel game design instead, despite me at the time was not into any visual novel haha.
+            </p>
+            <br /><br />
+            <h5><b>Hover over the image and click the sections!</b></h5>
+            <br />
+        </div>
+    </div>
+
+    <!-- MAP OF THE FOLIO BOARD -->
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-2"></div>
+                <div class="col">
+                    <img id="entropy-boardimg" usemap="#entropy_board" src="/Images/Entropy-final-board.png" class="img-fluid" style="max-height:460px" width="1024" height="459" alt="Yr 13 Entropy design folio board">
+
+                <map name="entropy_board">
+                    <!-- rect coords: left(x), top(y), right(x), bottom(y) -->
+                    <area 
+                    shape="rect"            
+                    coords="6, 4, 78, 118"
+                    class="tooltip" title="Design Proposal" 
+                    data-bs-toggle="modal"
+                    data-bs-target="#proposal">
+
+                    <area shape="rect"
+                    coords="6, 118, 78, 238"
+                    class="tooltip" title="Image Making"
+                    data-bs-toggle="modal"
+                    data-bs-target="#image">
+
+                    <area 
+                    shape="rect"            
+                    coords="78, 4, 338, 238"
+                    class="tooltip" title="Logo Design" 
+                    data-bs-toggle="modal"
+                    data-bs-target="#logo">
+
+                    <area shape="rect"
+                    coords="6, 238, 338, 454"
+                    class="tooltip" title="Character 1: Arcana (2-13-P)"
+                    data-bs-toggle="modal"
+                    data-bs-target="#arcana">
+
+                    <area shape="rect"
+                    coords="346, 4, 680, 234"
+                    class="tooltip" title="Character 2: Will"
+                    data-bs-toggle="modal"
+                    data-bs-target="#will">
+
+                    <area shape="rect"
+                    coords="346, 238, 680, 454"
+                    class="tooltip" title="Main Menu Screen"
+                    data-bs-toggle="modal"
+                    data-bs-target="#mainmenu">
+
+                    <area shape="rect"
+                    coords="686, 4, 1020, 178"
+                    class="tooltip" title="Environment & Gameplay"
+                    data-bs-toggle="modal"
+                    data-bs-target="#gameplay">
+
+                    <area shape="rect"
+                    coords="686, 178, 1020, 454"
+                    class="tooltip" title="Poster Design"
+                    data-bs-toggle="modal"
+                    data-bs-target="#poster">
+                </map>
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="proposal" role="dialog">
+            <!-- classess below: vertically centered and wide modal -->
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="proposalLabel">Design Proposal</h5>
+                        
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid row">
+                            <div class="col"><img src="/Images/EN1-proposal.png" width="400"></div>
+                            <div class="col align-self-center"><p>This is my design proposal, colour palette and synopsis of the story. The colour palette honestly doesn’t do justice to the story as a whole because the characters have quite different colour palettes from each other. So simplifying it to colours that can be counted by a hand isn’t a good decision. In this section, I have grasped more understanding of how the design process will go and have anticipated how to approach writing the synopsis and doing some of the sections.</p></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Image making -->
+        <div class="modal fade" id="image" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="imageLabel">Image Making</h5>
+                        
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid row">
+                            <div class="col"><img src="/Images/EN2-image.png" class="img-fluid"></div>
+                            <div class="col align-self-center">
+                                <p>Image making is an entirely new section to show that the design is regenerated by the use of photorealism. It’s a mandatory thing, and while I don’t really remember exactly what my Design teacher said, I try to include it by saying it will support the industrial theme of the game. So whether I want it or not, I should include real-life textures in the game by taking pictures of any object that caught my interest.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Logo -->
+        <div class="modal fade" id="logo" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="logoLabel">Logo Design</h5>
+                        
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div><img src="/Images/EN3-logo.png" class="img-fluid"></div>
+                            <div>
+                                <p>If you have read DECEIT’s logo section about how it wasn’t a fun section, this logo section is a point where I realise I’m just not interested in logo creation in general. Don’t get me wrong, making logo concepts are still fun! It took me a while to figure out why logos isn’t a fun case for me, and it’s probably due to my struggle to find a fine balance between making it not too much but not too less either. In this section, I also overestimated my ability to draw skulls, thinking I could learn it along the way. It resulted in logos that definitely can be developed more properly. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Arcana -->
+        <div class="modal fade" id="arcana" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="arcanaLabel">Arcana (2-13-P)</h5>
+                        
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div><img src="/Images/EN4-arcana.png" class="img-fluid"></div>
+                            <div>
+                                <p>2-13-P is not a common name for a reaper character. I’m not good with deciding names for characters, and since 2-13-P is not the only reaper in the story, I figure there must be some system that named/numbered them to ease the management. And it fits with the industrial theme, where the individual is less important than the collective. They are the first design I made during biology class, and since I wanted to make an animation design instead of a video game design, I purposefully make their design simple. As of now, their design is still developing. I have some new concepts where their robe has more patterns in it and a more unnaturally slim and lanky figure, but since then I haven’t tried to give it colour and see how it looks. Besides, in the early stages of the story, Arcana is fleshed more than 2-13-P, and so I was attached to her more.</p>
+                                <p>Arcana is 2-13-P’s prison of flesh. Her concepts are an interesting process to went through since I have never really delved into drawing children. I like how small she looked by 2-13-P and Will’s side, it emphasises her fragility and makes the people around her feel protective of her. Her bandaged eyes if I recall inspired by the saying “eyes are the windows to a soul” or something like that and heavily related to reapers purposefully covering their eye position with hair. Since eyes are my favourite thing to draw next to hair, getting rid of my favourite feature is a really fun restrictive thing to do. I start to focus on any other features like the body or the mouth to express emotion.
+                                <p>During the development stage, I am more prepared and now more focused on muted colours. I studied a bit of colour theory, and restrict the possible colour range for Arcana. Now the development looks more focused than last year. For 2-13-P, I just went with my trusty black-white colour scheme since it fits the reaper haha.</p>
+                                <p>The final took quite a while, since this time there are more of them because of course I just have to design two characters and force them into one section. And since this is a visual novel game, I should also create their sprites that will be used during dialogues. This is the first time I went into the game development world, and there is a lot to learn. But I don’t have much time, so I try to cut corners by making the sprites simple in gestures.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Will -->
+        <div class="modal fade" id="will" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="willLabel">Will</h5>
+                        
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div><img src="/Images/EN5-will.png" class="img-fluid"></div>
+                            <div>
+                                <p>If I think about it, both Will and Arcana are characters that I’ve never tried to draw. Will’s first impression when I designed him is how much the world affects him. The slum he lived in caused him to be malnourished, and his job caused him to be cold, rugged, and deadly. He doesn’t care about his appearance because every new people he met most likely will die at his hands. But of course, I need to make his character appealing in a way because I’m not confident in drawing a whole-heartedly messed-up character appearance-wise yet.</p>
+                                <p>I didn’t get to talk much about colouring in Arcana’s section, but this time, I also use a new colouring technique. It uses multiply, overlay and other layer effects and it helped me cut corners a lot. During DECEIT, I still rely on cell shading and while it has its beauty, it took so much time. Multiply lets you shade characters in one colour. It taught me values, and how to make certain areas darker or lighter due to the light position. It was still a trying period and you might see a significant difference from this to the new 2022 drawing, but I learn a lot from trying out this new technique.</p>
+                                <p>Just like Arcana’s, development is more focused and way less frustrating than DECEIT’s developments. The final, however, was quite a challenge due to me not really grasping Will’s character. Back then, I do know Will will slowly become a father figure to Arcana and will have his soft moments, but he almost never shows his happiness. Looking back at his sprites, it’s so weird to see his grinning sprite because the sprites in this board can be seen as sprites the game will use often, and you can count moments where Will might grin on one hand. He’s the type that will subtly smile if truly warranted and cannot force himself to smile without looking weird.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main menu -->
+        <div class="modal fade" id="mainmenu" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="mainmenuLabel">Main Menu Screen</h5>
+                        
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div><img src="/Images/EN6-mainmenu.png" class="img-fluid"></div>
+                            <div>
+                                <p>The main menu screen is interesting. I get to appreciate reusing assets since the first three sections have nearly sucked my motivation dry. My wish to avoid overachieving as I did during the DECEIT era made me restrict myself to not drawing any idea that comes to mind. I should write it down or make a rough sketch and think if this is necessary. How far can I use available logos, effects and image-making?</p>
+                                <p>In this section, I also start to think about whether I can make drawings that can be used in the poster as well as the main menu screen, so this really helped during the development section. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Environment + Gameplay -->
+        <div class="modal fade" id="gameplay" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="gameplayLabel">Environment + Gameplay Screen</h5>
+                        
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div><img src="/Images/EN7-gameplay.png" class="img-fluid"></div>
+                            <div>
+                                <p>During this section, I still haven’t finished the final version of the main menu section. Therefore the environment is reused on the final because it fits and shows a connection to the other section. Just like Arcana and Will, I have never really tried to draw backgrounds. So it’s definitely an interesting experience. I still have trouble with perspective (and just backgrounds in general), but it was a good learning experience.</p>
+                                <p>Brainstorming the visual novel layout was engaging. It’s fun to look at my current assets and see how I can reuse them. Where should I put the sprite, and what kind of dialogue layout I should use? The result isn’t the best one, but considering this is my first time, I’m quite proud of the end result.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Poster -->
+        <div class="modal fade" id="poster" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="posterLabel">Poster Design</h5>
+                        
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div><img src="/Images/EN8-poster.png" class="img-fluid"></div>
+                            <div>
+                                <p>This is probably the most frustrating part of Entropy. This is where it all comes together: the image making, the logo, the colour palette, and the characters… combine them to make the ultimate poster that shows what the game is about. The frustration comes from the colour palette and expectations. The colour palette is all over the place and I can’t really combine them together. For some drawings, I have an exact view of how it’s going to be, but my skill doesn’t let me produce that expected view, like for example, the poster with cracked glass and the 3 silhouettes. </p>
+                                <p>My favourites out of all of them are the two posters that made it into the semi-final—Arcana and Will sitting, and 2-13-P solo. I love them so much that I seriously don’t know which one I should use. After some voting, the 2-13-P solo wins and I use it as the final poster.</p>
+                                <p>Despite 2-13-P isn’t an active character in the story, they monopolise the whole promotional section. I’m sure they are proud of that, haha.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="container">
+            <div class="row py-5">
+                <div class="col">
+                <img class="img-fluid" src="~/Images/Final - Will-Arcana redraw Oct 2022.png" />
+                </div>
+                <div class="col">
+                    <h4>My current drawing skill (October 2022)</h4>
+                    <p>Comparing this drawing to my 2021 drawing is a mixed feeling.</p>
+                    <p>While I knew my drawings can improve at any point in time, even my latest ones, I really liked how these characters came out in 2021. I remember at one point, a classmate pointed out how Will looked off (that’s not exactly what they said) and I genuinely didn’t understand why they cannot see what I saw in Will. I want to capture a tired, sleep-deprived guy that still has a handsome rough look on him, and I thought I captured it well. But looking at my latest drawing of him and Arcana… yeah, I definitely improved quite a lot. Arcana looks less compressed (if it even looks that way) and Will looks tougher.</p>
+                    <p>I wonder if, in the future, I can convey my characters’ vibe even better.</p>
+                    <p>For now, I’ll be satisfied with what I can do.</p>
+                    <p>Entropy now is developed in two different paths: a video game and a linear story. The video game has multiple endings I’m not sure whether I will make an RPG or visual novel out of it, and the linear story could be comic or animation if I have the time and money for it. Its main plot is far from finished—after Entropy, I learn more about world-building and have since tried to flesh out the world of my stories to make a satisfying story with a plot that makes sense in terms of the world. The story that is once simple enough for me to put into the Design board has grown into a richer story, one that still has the potential to grow.</p>
+                    <p>Just like DECEIT and my other stories that didn’t get to be featured in a design portfolio board, I hope one day I can properly show you my characters and the worlds they live in.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row container-fluid">
+            <div class="col offset"></div>
+            <div class="col-1 p-2">
+                <a asp-controller="Home" asp-action="Year13">
+<i id="go_up" class="fa-solid fa-circle-up fa-2x"></i>
+                </a>
+        </div>
+            <div class="clearfix"></div>
+        </div>
 </body>
+
+<!-- Highlight map area jQuery plugin -->
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<script src="/lib/maphilight-master/jquery.maphilight.js"></script>
+<script>
+    $('.foo').maphilight()
+    $('img[usemap]').maphilight({ strokeColor: '394457', strokeWidth: 1.5, fillColor: '34a0a4', fillOpacity: 0.3 })
+</script>
+
+<!-- Scale-responsive map area jQuery plugin -->
+<script src="/lib/jQuery-rwdImageMaps-master/jquery.rwdImageMaps.js"></script>
+<script>
+    $('img[usemap]').rwdImageMaps();
+</script>
