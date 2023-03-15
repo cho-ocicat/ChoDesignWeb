@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OciDesignsWeb1", "OciDesignsWeb1\OciDesignsWeb1.csproj", "{E8A888DC-F0C3-45E6-8262-13E2421F6A25}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OciDesignsWeb1", "OciDesignsWeb1\OciDesignsWeb1.proj", "{E8A888DC-F0C3-45E6-8262-13E2421F6A25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
