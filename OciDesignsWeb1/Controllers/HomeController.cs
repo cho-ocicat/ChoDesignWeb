@@ -15,7 +15,7 @@ namespace OciDesignsWeb1.Controllers
 
         //controls which page to view
         //asp-controller="Home" asp-action="Index"
-        public IActionResult Index()
+        public IActionResult Index(
         {
             return View();
         }
