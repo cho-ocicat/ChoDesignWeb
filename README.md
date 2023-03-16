@@ -24,8 +24,13 @@ The basic requirements that she needs in her website are:
 
 Note: The content of the website is based on my last year's extra project, Design_Portfolio_Boards.
 
+---
 UPDATE 16/03/2023:
+
 Applying CI/CD (Continuous Integration/Continuous Deployment) method.
+
 For CI, I'm using Github Actions' workflows (currently .NET workflow).
+
 For CD, I deployed this repo through Microsoft Azure. Azure automatically create CD workflow if you enable CD during App Service creation.
-Website link: ocidesigns2.azurewebsites.net
+
+Website link: https://ocidesigns2.azurewebsites.net/
