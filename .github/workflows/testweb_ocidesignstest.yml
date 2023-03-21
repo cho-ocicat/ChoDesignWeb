@@ -1,10 +1,12 @@
----
-name: Build and deploy ASP.Net Core app to Azure Web App - ocidesigns2
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: CI/CD ocidesignstest
 
 on:
   push:
     branches:
-      - main
+      - TestWeb
   workflow_dispatch:
 
 jobs:
@@ -21,9 +23,9 @@ jobs:
           env:
             VALIDATE_ALL_CODEBASE: false
             VALIDATE_YAML: false
-            DEFAULT_BRANCH: "main"
+            DEFAULT_BRANCH: "TestWeb"
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+            
   build:
     runs-on: windows-latest
     needs: run-lint
@@ -53,7 +55,7 @@ jobs:
     runs-on: windows-latest
     needs: build
     environment:
-      name: 'Production'
+      name: 'Staging'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
@@ -66,7 +68,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'ocidesigns2'
+          app-name: 'ocidesignstest'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_92332B45CA964087AF192710DB7ADBDF }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C19B9CB18D7D4A51AF3ECC609919EF20 }}
           package: .

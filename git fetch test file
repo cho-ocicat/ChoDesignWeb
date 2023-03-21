@@ -1,8 +1,0 @@
-fetch is not transferring file like pull command.
-
-
-Adding changes to help see git stash effect.
-
-this line over here is to test git stash. Stashing the unfinished
-changes when you want to switch to another branch.
-
