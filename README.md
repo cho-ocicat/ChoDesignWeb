@@ -6,8 +6,8 @@ Frameworks used in this website's creation:
 2. Bootstrap 5 (JS included)
 
 jQuery plugins used:
-1. Maphilight by David Lynch <https://github.com/kemayo/maphilight>
-2. RWD Image Maps by Matt Stow <https://github.com/stowball/jQuery-rwdImageMaps/>
+1. Maphilight by David Lynch https://github.com/kemayo/maphilight
+2. RWD Image Maps by Matt Stow https://github.com/stowball/jQuery-rwdImageMaps/
 
 
 Scenario used for the website:
@@ -29,8 +29,8 @@ UPDATE 16/03/2023:
 
 Applying CI/CD (Continuous Integration/Continuous Deployment) method.
 
-For CI, I'm using GitHub Actions' workflows (currently .NET workflow).
+For CI, I'm using Github Actions' workflows (currently .NET workflow).
 
-For CD, I deployed this repository through Microsoft Azure. Azure automatically create CD workflow if you enable CD during App Service creation.
+For CD, I deployed this repo through Microsoft Azure. Azure automatically create CD workflow if you enable CD during App Service creation.
 
-Website link: <https://ocidesigns2.azurewebsites.net/>
+Website link: https://ocidesigns2.azurewebsites.net/
