@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: CICD ocidesignstest
+name: CI/CD ocidesignstest
 
 on:
   push:
@@ -55,7 +55,7 @@ jobs:
     runs-on: windows-latest
     needs: build
     environment:
-      name: 'Production'
+      name: 'Staging'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
@@ -69,6 +69,6 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'ocidesignstest'
-          slot-name: 'Production'
+          slot-name: 'Staging'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C19B9CB18D7D4A51AF3ECC609919EF20 }}
           package: .
